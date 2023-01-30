@@ -1397,7 +1397,7 @@ void ESPAsync_WiFiManager::reportStatus(String& page)
 
   if (WiFi_SSID() != "")
   {
-    page += F("Configured to connect to AP <b>");
+    page += F("Configurado para connectar ao AP <b>");
     page += WiFi_SSID();
 
     if (WiFi.status() == WL_CONNECTED)
@@ -1410,7 +1410,7 @@ void ESPAsync_WiFiManager::reportStatus(String& page)
     }
     else
     {
-      page += F(" but not connected.</b>");
+      page += F(" mas não conecdado.</b>");
     }
   }
   else
