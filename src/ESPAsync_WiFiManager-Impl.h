@@ -1513,7 +1513,7 @@ void ESPAsync_WiFiManager::handleWifi(AsyncWebServerRequest *request)
   page += FPSTR(WM_HTTP_STYLE);
   page += _customHeadElement;
   page += FPSTR(WM_HTTP_HEAD_END);
-  page += F("<h2>Configuration</h2>");
+  page += F("<h2>Configuração</h2>");
 
 #if !( USING_ESP32_S2 || USING_ESP32_C3 )
 
