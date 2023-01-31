@@ -395,7 +395,7 @@ const char WM_FLDSET_END[]    PROGMEM = "</fieldset>";
 
 ////////////////////////////////////////////////////
 
-const char WM_HTTP_PORTAL_OPTIONS[] PROGMEM = "<form action='/wifi' method='get'><button class='btn'>Configuration</button></form><br/><form action='/i' method='get'><button class='btn'>Information</button></form><br/><form action='/close' method='get'><button class='btn'>Exit Portal</button></form><br/>";
+const char WM_HTTP_PORTAL_OPTIONS[] PROGMEM = "<form action='/wifi' method='get'><button class='btn'>Configuração</button></form><br/><form action='/i' method='get'><button class='btn'>Informações</button></form><br/><form action='/close' method='get'><button class='btn'>Sair do Portal</button></form><br/>";
 const char WM_HTTP_ITEM[] PROGMEM = "<div><a href='#p' onclick='c(this)'>{v}</a>&nbsp;<span class='q {i}'>{r}%</span></div>";
 const char JSON_ITEM[] PROGMEM    = "{\"SSID\":\"{v}\", \"Encryption\":{i}, \"Quality\":\"{r}\"}";
 
@@ -427,11 +427,11 @@ const char WM_HTTP_FORM_LABEL_AFTER[]   PROGMEM   = "<div><input id='{i}' name='
 const char WM_HTTP_FORM_LABEL[] PROGMEM = "<label for='{i}'>{p}</label>";
 const char WM_HTTP_FORM_PARAM[] PROGMEM = "<input id='{i}' name='{n}' length={l} placeholder='{p}' value='{v}' {c}>";
 
-const char WM_HTTP_FORM_END[] PROGMEM = "<button class='btn' type='submit'>Save</button></form>";
+const char WM_HTTP_FORM_END[] PROGMEM = "<button class='btn' type='submit'>Salvar</button></form>";
 
 ////////////////////////////////////////////////////
 
-const char WM_HTTP_SAVED[] PROGMEM = "<div class='msg'><b>Credentials Saved</b><br>Try connecting ESP to the {x}/{x1} network. Wait around 10 seconds then check <a href='/'>if it's OK.</a> <p/>The {v} AP will run on the same WiFi channel of the {x}/{x1} AP. You may have to manually reconnect to the {v} AP.</div>";
+const char WM_HTTP_SAVED[] PROGMEM = "<div class='msg'><b>Credenciais Salvas</b><br>Tentando connectar ao ESP para a rede {x}/{x1}. Espere 10 segundos e então click aqui <a href='/'> se estiver.</a> <p/>O {v} AP irá execultar no mesmo canal de WiFi do AP {x}/{x1} . Você deve manualmente reconectar ao AP {v} .</div>";
 
 ////////////////////////////////////////////////////
 

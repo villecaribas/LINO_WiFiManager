@@ -1513,7 +1513,7 @@ void ESPAsync_WiFiManager::handleWifi(AsyncWebServerRequest *request)
   page += FPSTR(WM_HTTP_STYLE);
   page += _customHeadElement;
   page += FPSTR(WM_HTTP_HEAD_END);
-  page += F("<h2>Configuration</h2>");
+  page += F("<h2>Configuração</h2>");
 
 #if !( USING_ESP32_S2 || USING_ESP32_C3 )
 
@@ -1542,7 +1542,7 @@ void ESPAsync_WiFiManager::handleWifi(AsyncWebServerRequest *request)
 
 #endif    // ( USING_ESP32_S2 || USING_ESP32_C3 )
 
-  page += "<small>*Hint: To reuse the saved WiFi credentials, leave SSID and PWD fields empty</small>";
+  page += "<small>*Dica: para reusar credenciais salvas, deixe o SSID e a SENHA vazia</small>";
 
   page += FPSTR(WM_HTTP_FORM_START);
 
