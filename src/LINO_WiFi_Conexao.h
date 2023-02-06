@@ -786,7 +786,7 @@ void conectarWiFi() {
         Router_Pass = ESPAsync_wifiManager.WiFi_Pass();
 
         // Remove this line if you do not want to see WiFi password printed
-        Serial.println("ESP Self-Stored: SSID = " + Router_SSID + ", Pass = " + Router_Pass);
+        Serial.println("Conectando SSID Anterior: SSID = " + Router_SSID + ", Senha = " + Router_Pass);
 
         // SSID to uppercase
         ssid.toUpperCase();
