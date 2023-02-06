@@ -46,7 +46,7 @@
 #define ESP_ASYNC_WIFIMANAGER_VERSION_MIN 1015000
 
 // Use from 0 to 4. Higher number, more debugging messages and memory usage.
-#define _ESPASYNC_WIFIMGR_LOGLEVEL_ 3
+#define _ESPASYNC_WIFIMGR_LOGLEVEL_ 0
 
 // To not display stored SSIDs and PWDs on Config Portal, select false. Default is true
 // Even the stored Credentials are not display, just leave them all blank to reconnect and reuse the stored Credentials
@@ -196,7 +196,7 @@ FS *filesystem = &SPIFFS;
 #define ESP8266_DRD_USE_RTC false
 #endif
 
-#define DOUBLERESETDETECTOR_DEBUG true  // false
+#define DOUBLERESETDETECTOR_DEBUG false  // false
 
 #include <ESP_DoubleResetDetector.h>  //https://github.com/khoih-prog/ESP_DoubleResetDetector
 
@@ -958,13 +958,14 @@ void conectarWiFi() {
             }
         }
 
-        Serial.print(F("After waiting "));
+        Serial.print(F("Depois de esperar "));
         Serial.print((float)(millis() - startedAt) / 1000);
-        Serial.print(F(" secs more in setup(), connection result is "));
+        Serial.print(F(" segs no setup(), o resultrado da conexão é "));
 
         if (WiFi.status() == WL_CONNECTED) {
-            Serial.print(F("connected. Local IP: "));
+            Serial.print(F("connectado. IP local: \33[1;37m"));
             Serial.println(WiFi.localIP());
+            Serial.println("\033[0mFeliz \33[1;33mEU\33[1;31mRE\33[1;32mKA\033[0m Patrulheiro !!");
         } else
             Serial.println(ESPAsync_wifiManager.getStatus(WiFi.status()));
     }
