@@ -679,12 +679,12 @@ void conectarWiFi() {
 
         delay(200);
 
-        Serial.print(F("\nStarting Async_ConfigOnDoubleReset using "));
-        Serial.print(FS_Name);
-        Serial.print(F(" on "));
-        Serial.println(ARDUINO_BOARD);
-        Serial.println(ESP_ASYNC_WIFIMANAGER_VERSION);
-        Serial.println(ESP_DOUBLE_RESET_DETECTOR_VERSION);
+        // Serial.print(F("\nStarting Async_ConfigOnDoubleReset using "));
+        // Serial.print(FS_Name);
+        // Serial.print(F(" on "));
+        // Serial.println(ARDUINO_BOARD);
+        // Serial.println(ESP_ASYNC_WIFIMANAGER_VERSION);
+        // Serial.println(ESP_DOUBLE_RESET_DETECTOR_VERSION);
 
 #if defined(ESP_ASYNC_WIFIMANAGER_VERSION_INT)
 
@@ -800,14 +800,14 @@ void conectarWiFi() {
             wifiMulti.addAP(Router_SSID.c_str(), Router_Pass.c_str());
 
             ESPAsync_wifiManager.setConfigPortalTimeout(120);  // If no access point name has been previously entered disable timeout.
-            Serial.println(F("Got ESP Self-Stored Credentials. Timeout 120s for Config Portal"));
+            // Serial.println(F("Got ESP Self-Stored Credentials. Timeout 120s for Config Portal"));
         }
 
         if (loadConfigData()) {
             configDataLoaded = true;
 
             ESPAsync_wifiManager.setConfigPortalTimeout(120);  // If no access point name has been previously entered disable timeout.
-            Serial.println(F("Got stored Credentials. Timeout 120s for Config Portal"));
+            // Serial.println(F("Got stored Credentials. Timeout 120s for Config Portal"));
 
 #if USE_ESP_WIFIMANAGER_NTP
 
@@ -827,7 +827,7 @@ void conectarWiFi() {
 #endif
         } else {
             // Enter CP only if no stored SSID on flash and file
-            Serial.println(F("Open Config Portal without Timeout: No stored Credentials."));
+            Serial.println(F("Abrindo Portal de configuração sem Timeout: Sem credenciais configuradas."));
             initialConfig = true;
         }
 
@@ -835,12 +835,12 @@ void conectarWiFi() {
             // DRD, disable timeout.
             ESPAsync_wifiManager.setConfigPortalTimeout(0);
 
-            Serial.println(F("Open Config Portal without Timeout: Double Reset Detected"));
+            Serial.println(F("Abrindo portal de configuração sem Timeout: Double Reset Detectado"));
             initialConfig = true;
         }
 
         if (initialConfig) {
-            Serial.print(F("Starting configuration portal @ "));
+            Serial.print(F("Iniciando PORTAL de CONFIGURAÇÃO @ "));
 
 #if USE_CUSTOM_AP_IP
             Serial.print(APStaticIP);
@@ -952,7 +952,7 @@ void conectarWiFi() {
             }
 
             if (WiFi.status() != WL_CONNECTED) {
-                Serial.println(F("ConnectMultiWiFi in setup"));
+                // Serial.println(F("ConnectMultiWiFi in setup"));
 
                 connectMultiWiFi();
             }
