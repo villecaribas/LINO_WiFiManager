@@ -963,9 +963,7 @@ void conectarWiFi() {
         Serial.print(F(" segs no setup(), o resultrado da conexão é "));
 
         if (WiFi.status() == WL_CONNECTED) {
-            Serial.print(F("connectado. IP local: \33[1;37m"));
-            Serial.println(WiFi.localIP());
-            Serial.println("\033[0mFeliz \33[1;33mEU\33[1;31mRE\33[1;32mKA\033[0m Patrulheiro !!");
+            Serial.println(F("\33[1;33mCONECTADO!!\033[0m."));
         } else
             Serial.println(ESPAsync_wifiManager.getStatus(WiFi.status()));
     }
