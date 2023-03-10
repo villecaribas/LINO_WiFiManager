@@ -786,7 +786,7 @@ void conectarWiFi() {
         Router_Pass = ESPAsync_wifiManager.WiFi_Pass();
 
         // Remove this line if you do not want to see WiFi password printed
-        Serial.println("Conectando SSID Anterior: SSID = " + Router_SSID + ", Senha = " + Router_Pass);
+        Serial.println("Conectando SSID Anterior: SSID = \u001b[33m" + Router_SSID + "\u001b[0m, Senha = \u001b[33m" + Router_Pass + "\u001b[0m");
 
         // SSID to uppercase
         ssid.toUpperCase();
@@ -807,7 +807,7 @@ void conectarWiFi() {
             configDataLoaded = true;
 
             ESPAsync_wifiManager.setConfigPortalTimeout(120);  // If no access point name has been previously entered disable timeout.
-            // Serial.println(F("Got stored Credentials. Timeout 120s for Config Portal"));
+                                                               // Serial.println(F("Got stored Credentials. Timeout 120s for Config Portal"));
 
 #if USE_ESP_WIFIMANAGER_NTP
 
@@ -848,10 +848,11 @@ void conectarWiFi() {
             Serial.print(F("192.168.4.1"));
 #endif
 
-            Serial.print(F(", SSID = "));
+            Serial.print(F(", SSID = \u001b[33;1m"));
             Serial.print(ssid);
-            Serial.print(F(", PWD = "));
+            Serial.print(F("\u001b[0m, PWD = \u001b[33;1m"));
             Serial.println(password);
+            Serial.print("\u001b[0m");
 
             digitalWrite(PIN_LED, LED_ON);  // turn the LED on by making the voltage LOW to tell us we are in configuration mode.
 
