@@ -806,7 +806,7 @@ void setup()
     if ( !ESPAsync_wifiManager.startConfigPortal(AP_SSID.c_str(), AP_PASS.c_str()) )
       Serial.println(F("Not connected to WiFi but continuing anyway."));
     else
-      Serial.println(F("WiFi connected...yeey :)"));
+      Serial.println(F("WiFi Conectado...EUREKA!! :)"));
 
     // Stored  for later usage, from v1.1.0, but clear first
     memset(&WM_config, 0, sizeof(WM_config));

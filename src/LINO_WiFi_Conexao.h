@@ -869,9 +869,9 @@ void conectarWiFi() {
 
             // Starts an access point
             if (!ESPAsync_wifiManager.startConfigPortal((const char *)ssid.c_str(), password.c_str()))
-                Serial.println(F("Not connected to WiFi but continuing anyway."));
+                Serial.println(F("Não conectado ao WiFi mas continua tentando."));
             else {
-                Serial.println(F("WiFi connected...yeey :)"));
+                Serial.println(F("WiFi CONECTADO...EUREKA!! :)"));
             }
 
             // Stored  for later usage, from v1.1.0, but clear first

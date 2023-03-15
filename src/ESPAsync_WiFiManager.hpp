@@ -429,6 +429,10 @@ const char WM_HTTP_FORM_LABEL_AFTER[]   PROGMEM   = "<div><input id='{i}' name='
 const char WM_HTTP_FORM_LABEL[] PROGMEM = "<label for='{i}'>{p}</label>";
 const char WM_HTTP_FORM_PARAM[] PROGMEM = "<input id='{i}' name='{n}' length={l} placeholder='{p}' value='{v}' {c}>";
 
+// const char WM_HTTP_FORM_LABEL[] PROGMEM = "";
+// const char WM_HTTP_FORM_PARAM[] PROGMEM = "";
+
+
 const char WM_HTTP_FORM_END[] PROGMEM = "<button class='btn' type='submit'>Salvar</button></form>";
 
 ////////////////////////////////////////////////////

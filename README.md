@@ -2027,7 +2027,7 @@ void loop()
     else
     {
       //if you get here you have connected to the WiFi
-      Serial.println(F("connected...yeey :)"));
+      Serial.println(F("Conectado...EUREKA!! :)"));
       Serial.print(F("Local IP: "));
       Serial.println(WiFi.localIP());
     }
