@@ -786,7 +786,7 @@ void conectarWiFi() {
         Router_Pass = ESPAsync_wifiManager.WiFi_Pass();
 
         // Remove this line if you do not want to see WiFi password printed
-        Serial.println("Conectando SSID Anterior: SSID = \u001b[33m" + Router_SSID + "\u001b[0m, Senha = \u001b[33m" + Router_Pass + "\u001b[0m");
+        Serial.println("Conexão configurada: WiFi = \u001b[33m" + Router_SSID + "\u001b[0m, Senha = \u001b[33m" + Router_Pass + "\u001b[0m");
 
         // SSID to uppercase
         ssid.toUpperCase();
@@ -840,7 +840,7 @@ void conectarWiFi() {
         }
 
         if (initialConfig) {
-            Serial.print(F("Iniciando PORTAL de CONFIGURAÇÃO @ "));
+            Serial.print(F("\nIniciando PORTAL de CONFIGURAÇÃO @ "));
 
 #if USE_CUSTOM_AP_IP
             Serial.print(APStaticIP);
@@ -848,9 +848,9 @@ void conectarWiFi() {
             Serial.print(F("192.168.4.1"));
 #endif
 
-            Serial.print(F(", SSID = \u001b[33;1m"));
+            Serial.print(F("\nWiFi = \u001b[33;1m"));
             Serial.print(ssid);
-            Serial.print(F("\u001b[0m, PWD = \u001b[33;1m"));
+            Serial.print(F("\u001b[0m, Senha = \u001b[33;1m"));
             Serial.println(password);
             Serial.print("\u001b[0m");
 
