@@ -354,7 +354,9 @@ IPAddress APStaticSN = IPAddress(255, 255, 255, 0);
 // #include <ESPAsync_WiFiManager-Impl.h>          //https://github.com/khoih-prog/ESPAsync_WiFiManager
 
 // SSID and PW for Config Portal
-String ssid = "LINO_" + String(ESP_getChipId(), HEX);
+// String ssid = "LINO_" + String(ESP_getChipId(), HEX);
+String ssid = "LINO_do_GUARDIAO";
+
 String password = "eureka#nos";
 // const char* password = "your_password";
 
